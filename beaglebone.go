@@ -9,6 +9,21 @@ import (
 
 type Bone int
 
+const (
+	reg_dummy    = 0
+	reg_mode     = 1 // on write
+	reg_status   = 1 // on read
+	reg_curr_h   = 2
+	reg_curr_l   = 3
+	reg_stamp_h  = 4
+	reg_stamp_l  = 5
+	reg_adc_val  = 6
+	reg_adc_addr = 7
+	reg_adc_data = 8
+	reg_post     = 9
+	reg_level    = 10
+)
+
 func NewBone() (Bone, error) {
 	b, err := syscall.Open("/dev/logibone_mem", syscall.O_RDWR|syscall.O_SYNC, 777)
 	if err != nil {
