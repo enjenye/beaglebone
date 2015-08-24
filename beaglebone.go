@@ -10,18 +10,16 @@ import (
 type Bone int
 
 const (
-	reg_dummy    = 0
-	reg_mode     = 1 // on write
-	reg_status   = 1 // on read
-	reg_curr_h   = 2
-	reg_curr_l   = 3
-	reg_stamp_h  = 4
-	reg_stamp_l  = 5
-	reg_adc_val  = 6
-	reg_adc_addr = 7
-	reg_adc_data = 8
-	reg_post     = 9
-	reg_level    = 10
+	REG_DUMMY    = 0
+	REG_MODE     = 1 // on write
+	REG_STATUS   = 1 // on read
+	REG_CURR     = 2
+	REG_STAMP    = 4
+	REG_ADC_VAL  = 6
+	REG_ADC_ADDR = 7
+	REG_ADC_DATA = 8
+	REG_POST     = 9
+	REG_LEVEL    = 10
 )
 
 func NewBone() (Bone, error) {
